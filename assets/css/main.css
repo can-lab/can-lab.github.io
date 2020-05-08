@@ -3653,7 +3653,7 @@
 			left: 26em;
 			line-height: 7.5em;
 			outline: 0;
-			/*overflow: hidden;*/
+			overflow: hidden;
 			position: absolute;
 			text-align: center;
 			text-indent: 7.5em;
@@ -3741,7 +3741,7 @@
 					-webkit-overflow-scrolling: touch;
 					height: 100%;
 					left: 0;
-					/*overflow-x: hidden;*/
+					overflow-x: hidden;
 					overflow-y: auto;
 					position: absolute;
 					top: 0;
