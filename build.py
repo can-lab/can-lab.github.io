@@ -12,7 +12,7 @@ def _render_template(template_filename, context):
                                        loader=FileSystemLoader('source'),
                                        trim_blocks=False)
 
-    return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
+    return TEMPLATE_ENVIRONMENT.get_template(template_filename.replace("\\", "/")).render(context)
 
 def delete_html_files():
     files = glob.glob("*.html")
