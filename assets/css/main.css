@@ -3654,7 +3654,7 @@
 			line-height: 7.5em;
 			outline: 0;
 			overflow-x: hidden;
-			overflow-y: auto;
+			overflow-y: scroll;
 			position: absolute;
 			text-align: center;
 			text-indent: 7.5em;
