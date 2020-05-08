@@ -3653,7 +3653,8 @@
 			left: 26em;
 			line-height: 7.5em;
 			outline: 0;
-			overflow: hidden;
+			overflow-x: hidden;
+			overflow-y: auto;
 			position: absolute;
 			text-align: center;
 			text-indent: 7.5em;
