@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 import fnmatch
 import codecs
@@ -30,7 +28,7 @@ def create_html_files():
                         if "lab_members" in root:
                             with codecs.open(os.path.join(root, filename), 'r', "utf-8") as f:
                                 source_code = f.read()
-                            soup = BeautifulSoup(source_code)
+                            soup = BeautifulSoup(source_code, features="html.parser")
                             members.append({"name": soup.h1.text,
                                             "function": soup.p.text,
                                             "url": "_".join(soup.h1.text.lower().split()) + ".html",
@@ -46,7 +44,7 @@ def create_html_files():
         if file_ == "base.html":
             continue
         with codecs.open(os.path.split(file_)[1], 'w', encoding='utf-8') as f:
-            print file_
+            print(file_)
             html = _render_template(file_, context)
             f.write(html)
 
