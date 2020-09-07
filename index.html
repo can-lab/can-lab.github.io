@@ -89,6 +89,26 @@
 
     <article>
     <span class="icon image profile-image">
+        <a href="lisa_wirz.html"><img src="images/profile.png" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="lisa_wirz.html">Lisa Wirz</a></h3>
+        <p>Postdoc</p>
+    </div>
+    </article>
+
+    <article>
+    <span class="icon image profile-image">
+        <a href="sophie_bögemann.html"><img src="images/profile.png" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="sophie_bögemann.html">Sophie Bögemann</a></h3>
+        <p>PhD candidate</p>
+    </div>
+    </article>
+
+    <article>
+    <span class="icon image profile-image">
         <a href="maxime_houtekamer.html"><img src="images/Maxime_250.jpg" alt="" /></a>
     </span>
     <div class="content">
@@ -159,6 +179,26 @@
 
     <article>
     <span class="icon image profile-image">
+        <a href="yannik_murray.html"><img src="images/profile.png" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="yannik_murray.html">Yannik Murray</a></h3>
+        <p>Master student</p>
+    </div>
+    </article>
+
+    <article>
+    <span class="icon image profile-image">
+        <a href="eliana_vassena.html"><img src="images/profile.png" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="eliana_vassena.html">Eliana Vassena</a></h3>
+        <p>Senior researcher</p>
+    </div>
+    </article>
+
+    <article>
+    <span class="icon image profile-image">
         <a href="alumni.html"><img src="images/alumni.png" alt="" /></a>
     </span>
     <div class="content">
@@ -174,6 +214,16 @@
     <div class="content">
         <h3><a href="tim_vriens.html">Tim Vriens</a></h3>
         <p>Research Assistant</p>
+    </div>
+    </article>
+
+    <article>
+    <span class="icon image profile-image">
+        <a href="femke_lammertink.html"><img src="images/profile.png" alt="" /></a>
+    </span>
+    <div class="content">
+        <h3><a href="femke_lammertink.html">Femke Lammertink</a></h3>
+        <p>External PhD Candidate</p>
     </div>
     </article>
  
@@ -237,6 +287,10 @@
                                             
                                                 <li><a href="judith_van_leeuwen.html">Judith van Leeuwen (Postdoc)</a></li>
                                             
+                                                <li><a href="lisa_wirz.html">Lisa Wirz (Postdoc)</a></li>
+                                            
+                                                <li><a href="sophie_bögemann.html">Sophie Bögemann (PhD candidate)</a></li>
+                                            
                                                 <li><a href="maxime_houtekamer.html">Maxime Houtekamer (PhD candidate)</a></li>
                                             
                                                 <li><a href="nikos_kogias.html">Nikos Kogias (PhD candidate)</a></li>
@@ -251,9 +305,15 @@
                                             
                                                 <li><a href="savi_huan_wang.html">Savi Huan Wang (PhD candidate)</a></li>
                                             
+                                                <li><a href="yannik_murray.html">Yannik Murray (Master student)</a></li>
+                                            
+                                                <li><a href="eliana_vassena.html">Eliana Vassena (Senior researcher)</a></li>
+                                            
                                                 <li><a href="alumni.html">Alumni (Former lab members)</a></li>
                                             
                                                 <li><a href="tim_vriens.html">Tim Vriens (Research Assistant)</a></li>
+                                            
+                                                <li><a href="femke_lammertink.html">Femke Lammertink (External PhD Candidate)</a></li>
                                             
 											</ul>
 										</li>
@@ -274,7 +334,7 @@
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2017 Florian Krause. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; 2017-<span id="currentyear"></span> <a href="index.html">CAN-lab</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -316,6 +376,13 @@
                    }
                 );
               });
+            </script>
+	    <script>
+            function myFunction() {
+              var d = new Date();
+              var n = d.getFullYear();
+              document.getElementById("currentyear").innerHTML = n;
+            }
             </script>
 	</body>
 </html>
