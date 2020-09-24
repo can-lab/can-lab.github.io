@@ -46,11 +46,13 @@ def create_html_files():
     members_postdoc.sort(key=lambda x: x["name"].split(" ")[-1])
     members_phd = [d for d in members if d['function'] == 'phd candidate']
     members_phd.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_extphd = [d for d in members if d['function'] == 'external phd candidate']
+    members_extphd.sort(key=lambda x: x["name"].split(" ")[-1])
     members_ra = [d for d in members if d['function'] == 'research assistant']
     members_ra.sort(key=lambda x: x["name"].split(" ")[-1])
     members_tr = [d for d in members if d['function'] == 'trainee']
     members_tr.sort(key=lambda x: x["name"].split(" ")[-1]) 
-    members = members_pi + members_sr + members_postdoc + members_phd + members_ra + members_tr
+    members = members_pi + members_sr + members_postdoc + members_phd + members_extphd + members_ra + members_tr
     
     context = {
             'members': members
