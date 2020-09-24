@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://kit.fontawesome.com/c559931d6a.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 
@@ -81,7 +82,7 @@
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2017 Florian Krause. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; 2017-<span id="currentyear"></span> <a href="index.html">CAN-lab</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -95,22 +96,41 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-      <!--<script>window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
+            <script> window.twttr = (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
 
-          t._e = [];
-          t.ready = function(f) {
-          t._e.push(f);
-          };
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
 
-          return t;
-          }(document, "script", "twitter-wjs"));</script>-->
+              return t;
+            }(document, "script", "twitter-wjs"));</script>
 
+            <script type="text/javascript">
+              twttr.ready(function (twttr) {
+                twttr.events.bind(
+                  'loaded',
+                  function (event) {
+                    event.widgets.forEach(function (widget) {
+                      $(window).trigger('resize.sidebar-lock');
+                    });
+                   }
+                );
+              });
+            </script>
+	    <script>
+            function myFunction() {
+              var d = new Date();
+              var n = d.getFullYear();
+              document.getElementById("currentyear").innerHTML = n;
+            }
+            </script>
 	</body>
 </html>

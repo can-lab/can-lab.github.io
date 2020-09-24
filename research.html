@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://kit.fontawesome.com/c559931d6a.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 
@@ -144,31 +145,33 @@
                                             
                                                 <li><a href="florian_krause.html">Florian Krause (Postdoc)</a></li>
                                             
-                                                <li><a href="linda_de_voogd.html">Linda de Voogd (Postdoc)</a></li>
+                                                <li><a href="judith_van_leeuwen.html">Judith van Leeuwen (Postdoc)</a></li>
                                             
-                                                <li><a href="martin_krentz.html">Martin Krentz (PhD student)</a></li>
+                                                <li><a href="lisa_wirz.html">Lisa Wirz (Postdoc)</a></li>
                                             
-                                                <li><a href="laura_kress.html">Laura Kress (PhD student)</a></li>
+                                                <li><a href="sophie_bögemann.html">Sophie Bögemann (PhD candidate)</a></li>
                                             
-                                                <li><a href="judith_van_leeuwen.html">Judith van Leeuwen (PhD student)</a></li>
+                                                <li><a href="maxime_houtekamer.html">Maxime Houtekamer (PhD candidate)</a></li>
                                             
-                                                <li><a href="maria_lojowska.html">Maria Lojowska (PhD student)</a></li>
+                                                <li><a href="nikos_kogias.html">Nikos Kogias (PhD candidate)</a></li>
                                             
-                                                <li><a href="deborah_peeters.html">Deborah Peeters (PhD student)</a></li>
+                                                <li><a href="martin_krentz.html">Martin Krentz (PhD candidate)</a></li>
                                             
-                                                <li><a href="rayyan_tutunji.html">Rayyan Tutunji (PhD student)</a></li>
+                                                <li><a href="laura_de_nooij.html">Laura de Nooij (PhD candidate)</a></li>
                                             
-                                                <li><a href="savi_huan_wang.html">Savi Huan Wang (PhD student)</a></li>
+                                                <li><a href="deborah_peeters.html">Deborah Peeters (PhD candidate)</a></li>
                                             
-                                                <li><a href="ilaria_corti.html">Ilaria Corti (Master student)</a></li>
+                                                <li><a href="rayyan_tutunji.html">Rayyan Tutunji (PhD candidate)</a></li>
                                             
-                                                <li><a href="sara_jackson.html">Sara Jackson (Master student)</a></li>
+                                                <li><a href="savi_huan_wang.html">Savi Huan Wang (PhD candidate)</a></li>
                                             
-                                                <li><a href="hariharan_murali_mahadevan.html">Hariharan Murali Mahadevan (Master student)</a></li>
-                                            
-                                                <li><a href="yannik_murray.html">Yannik Murray (Master student)</a></li>
+                                                <li><a href="eliana_vassena.html">Eliana Vassena (Senior researcher)</a></li>
                                             
                                                 <li><a href="alumni.html">Alumni (Former lab members)</a></li>
+                                            
+                                                <li><a href="tim_vriens.html">Tim Vriens (Research Assistant)</a></li>
+                                            
+                                                <li><a href="femke_lammertink.html">Femke Lammertink (External PhD Candidate)</a></li>
                                             
 											</ul>
 										</li>
@@ -189,7 +192,7 @@
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2017 Florian Krause. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; 2017-<span id="currentyear"></span> <a href="index.html">CAN-lab</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -203,22 +206,41 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-      <!--<script>window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
+            <script> window.twttr = (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+              if (d.getElementById(id)) return t;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
 
-          t._e = [];
-          t.ready = function(f) {
-          t._e.push(f);
-          };
+              t._e = [];
+              t.ready = function(f) {
+                t._e.push(f);
+              };
 
-          return t;
-          }(document, "script", "twitter-wjs"));</script>-->
+              return t;
+            }(document, "script", "twitter-wjs"));</script>
 
+            <script type="text/javascript">
+              twttr.ready(function (twttr) {
+                twttr.events.bind(
+                  'loaded',
+                  function (event) {
+                    event.widgets.forEach(function (widget) {
+                      $(window).trigger('resize.sidebar-lock');
+                    });
+                   }
+                );
+              });
+            </script>
+	    <script>
+            function myFunction() {
+              var d = new Date();
+              var n = d.getFullYear();
+              document.getElementById("currentyear").innerHTML = n;
+            }
+            </script>
 	</body>
 </html>
