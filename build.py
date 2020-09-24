@@ -30,12 +30,28 @@ def create_html_files():
                                 source_code = f.read()
                             soup = BeautifulSoup(source_code, features="html.parser")
                             members.append({"name": soup.h1.text,
-                                            "function": soup.p.text,
+                                            "function": soup.p.text.lower(), # ** .lower() added by Laura de Nooij, 24-09-2020
                                             "url": "_".join(soup.h1.text.lower().split()) + ".html",
                                             "image": soup.span.img['src']})
 
-    # Sort first by length of function (PI < Postdoc < PhD student < Master student), then by LAST name
-    members.sort(key=lambda x: (len(x["function"]), x["name"].split(" ")[-1]))
+#   # Sort first by length of function (PI < Postdoc < PhD student < Master student), then by LAST name ** commented out by Laura de Nooij, 24-09-2020
+#    members.sort(key=lambda x: (len(x["function"]), x["name"].split(" ")[-1]))
+
+    # Sort functions ** added by Laura de Nooij, 24-09-2020
+    members_pi = [d for d in members if d['function'] == 'pi']
+    members_pi.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_sr = [d for d in members if d['function'] == 'senior researcher']
+    members_sr.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_postdoc = [d for d in members if d['function'] == 'postdoc']
+    members_postdoc.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_phd = [d for d in members if d['function'] == 'phd candidate']
+    members_phd.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_ra = [d for d in members if d['function'] == 'research assistant']
+    members_ra.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_tr = [d for d in members if d['function'] == 'trainee']
+    members_tr.sort(key=lambda x: x["name"].split(" ")[-1]) 
+    members = members_pi + members_sr + members_postdoc + members_phd + members_ra + members_tr
+    
     context = {
             'members': members
         }
@@ -47,6 +63,7 @@ def create_html_files():
             print(file_)
             html = _render_template(file_, context)
             f.write(html)
+
 
 def main():
     delete_html_files()
