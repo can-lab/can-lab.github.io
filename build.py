@@ -31,7 +31,7 @@ def create_html_files():
                             soup = BeautifulSoup(source_code, features="html.parser")
                             members.append({"name": soup.h1.text,
                                             "function": soup.p.text, # ** .lower() added by Laura de Nooij, 24-09-2020
-                                            "url": "_".join(soup.h1.text.split()) + ".html",
+                                            "url": "_".join(soup.h1.text.lower().split()) + ".html",
                                             "image": soup.span.img['src']})
 
 #   # Sort first by length of function (PI < Postdoc < PhD student < Master student), then by LAST name ** commented out by Laura de Nooij, 24-09-2020
