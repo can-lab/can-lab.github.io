@@ -19,10 +19,15 @@
 <p>
 <strong>
 <script>
-    document.write('<a href="' + document.referrer + '">Please click here when done</a>');
+    var referrer = document.referrer
+    if (referrer != "") {
+        document.write('<a href="' + referrer + '">Please click here when done</a>');
+        }
 </script>
-<noscript>Please go back to previous page when done
-</noscript></strong>
+<noscript>
+Please navigate back to previous page when done
+</noscript>
+</strong>
 </p>
 </div>
 </main>
