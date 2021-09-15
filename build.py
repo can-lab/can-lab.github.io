@@ -48,10 +48,14 @@ def create_html_files():
     members_phd.sort(key=lambda x: x["name"].split(" ")[-1])
     members_extphd = [d for d in members if d['function'] == 'External PhD Candidate']
     members_extphd.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_visitphd = [d for d in members if d['function'] == 'Visiting PhD Candidate']
+    members_visitphd.sort(key=lambda x: x["name"].split(" ")[-1])
     members_ra = [d for d in members if d['function'] == 'Research Assistant']
     members_ra.sort(key=lambda x: x["name"].split(" ")[-1])
     members_tr = [d for d in members if d['function'] == 'Trainee']
     members_tr.sort(key=lambda x: x["name"].split(" ")[-1])
+    members_exttr = [d for d in members if d['function'] == 'External Trainee']
+    members_exttr.sort(key=lambda x: x["name"].split(" ")[-1])
     members_former = [d for d in members if d['function'] == 'Former Lab Members']
     members = members_pi + members_sr + members_postdoc + members_phd + members_extphd + members_ra + members_tr + members_former
 
