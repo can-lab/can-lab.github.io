@@ -56,7 +56,7 @@ def create_html_files():
     members_tr.sort(key=lambda x: x["name"].split(" ")[-1])
     members_exttr = [d for d in members if d['function'] == 'External Trainee']
     members_exttr.sort(key=lambda x: x["name"].split(" ")[-1])
-    members_former = [d for d in members if d['function'] == 'Former Lab Members']
+    members_former = [d for d in members if d['function'] == 'Former lab members']
     members = members_pi + members_sr + members_postdoc + members_phd + members_extphd + members_visitphd + members_ra + members_tr + members_exttr + members_former
 
     context = {
